@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { ExpenseTableComponent } from './domain/expense-table/expense-table.component';
 import { ExpenseService } from './domain/expense/expense.service';
 import { ExpenseCategorySelectorComponent } from './domain/expense-category-selector/expense-category-selector.component';
+import { NavbarComponent } from './domain/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ExpenseCategorySelectorComponent } from './domain/expense-category-sele
   ],
   declarations: [
     AppComponent,
+    NavbarComponent,
     ExpenseTableComponent,
     ExpenseCategorySelectorComponent
   ],
