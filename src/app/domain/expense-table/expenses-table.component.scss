@@ -1,0 +1,35 @@
+.container {
+  width: 700px;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.table caption {
+  border: inherit;
+  caption-side: top;
+  margin-left: 10px;
+}
+
+.table caption span {
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 31px;
+}
+
+.table-container {
+  border: 1px solid #e5e5e5;
+}
+
+.pagination {
+  margin-right: 10px;
+}
+
+.pagination-total {
+  color: #aeaeae;
+  padding-right: 12px;
+  font-weight: 400;
+}

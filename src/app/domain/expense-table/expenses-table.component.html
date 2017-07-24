@@ -1,0 +1,45 @@
+<div class="container shadow">
+  <div class="col table-container">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <caption>
+          <span><strong>Today expenses</strong></span>
+        </caption>
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Description</th>
+          <th>Ammount</th>
+          <th>Category</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let row of expenses; let i = index">
+          <td>{{row.id}}</td>
+          <td>{{row.desc}}</td>
+          <td>{{row.amount}}</td>
+          <td>{{row.category}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav aria-label="Expenses table pagination">
+      <ul class="pagination pagination-sm justify-content-end">
+        <div class="text-center" style="line-height: 31px;">
+          <span class="pagination-total">1 - 11 of 43 total</span>
+        </div>
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
