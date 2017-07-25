@@ -6,15 +6,15 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './mock/in-memory-data.service';
 import { AppRoutingModule } from './app-routing-module';
-import { ExpenseTableComponent } from './domain/expense-table/expense-table.component';
-import { ExpenseService } from './domain/expense/expense.service';
-import { ExpenseCategorySelectorComponent } from './domain/expense-category-selector/expense-category-selector.component';
-import { NavbarComponent } from './domain/navbar/navbar.component';
-import { HomeComponent } from './domain/home/home.component';
-import { StatisticsComponent } from './domain/statistics/statistics.component';
-import { HistoryComponent } from './domain/history/history.component';
-import { RegisterComponent } from './domain/register/register.component';
-import { SignInComponent } from './domain/sign-in/sign-in.component';
+import { ExpenseTableComponent } from './domain/components/expense-table/expense-table.component';
+import { ExpenseService } from './domain/components/expense/expense.service';
+import { ExpenseCategorySelectorComponent } from './domain/components/expense-category-selector/expense-category-selector.component';
+import { NavbarComponent } from './domain/components/navbar/navbar.component';
+import { HomeComponent } from './domain/pages/home/home.component';
+import { StatisticsComponent } from './domain/pages/statistics/statistics.component';
+import { HistoryComponent } from './domain/pages/history/history.component';
+import { RegisterComponent } from './domain/auth/register/register.component';
+import { SignInComponent } from './domain/auth/sign-in/sign-in.component';
 
 @NgModule({
   imports: [
