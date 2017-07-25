@@ -10,6 +10,9 @@ import { ExpenseTableComponent } from './domain/expense-table/expense-table.comp
 import { ExpenseService } from './domain/expense/expense.service';
 import { ExpenseCategorySelectorComponent } from './domain/expense-category-selector/expense-category-selector.component';
 import { NavbarComponent } from './domain/navbar/navbar.component';
+import { HomeComponent } from './domain/home/home.component';
+import { StatisticsComponent } from './domain/statistics/statistics.component';
+import { HistoryComponent } from './domain/history/history.component';
 
 @NgModule({
   imports: [
@@ -21,6 +24,9 @@ import { NavbarComponent } from './domain/navbar/navbar.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    HomeComponent,
+    HistoryComponent,
+    StatisticsComponent,
     ExpenseTableComponent,
     ExpenseCategorySelectorComponent
   ],

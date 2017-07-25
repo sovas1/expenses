@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="mt-5">
+    <div class="row">
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              Category
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Category 1</a>
+              <a class="dropdown-item" href="#">Category 2</a>
+              <a class="dropdown-item" href="#">Category 3</a>
+              <!--<div role="separator" class="dropdown-divider"></div>-->
+              <a class="dropdown-item" href="#">Category 4</a>
+            </div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+      </div>
+      <div class="col-1">
+        <button type="button" class="btn btn-block btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <expenses-table></expenses-table>
+  </div>
+
+</div>
