@@ -2,6 +2,10 @@
   "name": "daily-expenses",
   "version": "1.0.0",
   "description": "DailyExpenses package.json from the documentation, supplemented with testing support",
+  "engines": {
+    "node": "6.9.5",
+    "npm": "3.10.10"
+  },
   "scripts": {
     "postinstall": "tsc",
     "build": "tsc -p src/",
@@ -20,10 +24,6 @@
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose"
-  },
-  "engines": {
-    "node": "6.3.0",
-    "npm": "3.9.5"
   },
   "keywords": [],
   "author": "",
