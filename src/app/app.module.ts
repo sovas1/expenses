@@ -13,6 +13,8 @@ import { NavbarComponent } from './domain/navbar/navbar.component';
 import { HomeComponent } from './domain/home/home.component';
 import { StatisticsComponent } from './domain/statistics/statistics.component';
 import { HistoryComponent } from './domain/history/history.component';
+import { RegisterComponent } from './domain/register/register.component';
+import { SignInComponent } from './domain/sign-in/sign-in.component';
 
 @NgModule({
   imports: [
@@ -27,6 +29,8 @@ import { HistoryComponent } from './domain/history/history.component';
     HomeComponent,
     HistoryComponent,
     StatisticsComponent,
+    SignInComponent,
+    RegisterComponent,
     ExpenseTableComponent,
     ExpenseCategorySelectorComponent
   ],
