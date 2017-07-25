@@ -2,19 +2,24 @@ dist: trusty
 sudo: required
 language: node_js
 node_js:
-  - "5"
+- '5'
 os:
-  - linux
+- linux
 env:
   global:
-    - DBUS_SESSION_BUS_ADDRESS=/dev/null
-    - DISPLAY=:99.0
-    - CHROME_BIN=chromium-browser
+  - DBUS_SESSION_BUS_ADDRESS=/dev/null
+  - DISPLAY=:99.0
+  - CHROME_BIN=chromium-browser
 before_script:
-  - sh -e /etc/init.d/xvfb start
+- sh -e /etc/init.d/xvfb start
 install:
-  - npm install
+- npm install
 script:
-  - npm run lint
-#  - npm run test:once
-#  - npm run e2e
+- npm run lint
+deploy:
+  provider: heroku
+  api_key:
+    secure: C4nZHlmZaimCiVXTPrkngV9xoVw3//WcD3V6JKglKTwlXh01a+28dCLGjWOtN5mavIsCZeBXOf1pofyvYrW+5bw/r3vUO9kaZ0Sb/MMMbGQNuVDEXQUMYqK9X0JFpaNx9kUQL3BV8PEGR41cmnjqc0M4IAvYcq7oldBfasbCCTHJ/6Bm6KbjMtlzDSDduqwNAwPHPhIgvWsVeODYpQxe8MQ0MNP/LMPa9Sk3/skqbD6wc+fjWhgr1CC5rHY/bVOrBDdQoKRmVMq+JTbMb4d7tlpLcwmZBTXRmDJeL+DqQH7xZEPxX1D5NiIDiqCLQ7R6KekbzxlhdVQA9whh/57u5cvto29t9BO8vtZG44/z+MkhkCNrbew0x9ZofVH7mUY/xnuzlDm4Ox/nrH5dQQEKE7B2HsRhcmb/5e22oVysB6jqgK7t20a4UM8uvM14xam2OrdDOjqDYTsO2TmAW1u+hYn5CmG4z4YdOCfQ67O6Fswo/9xhk7oQX2f5ls1Fsoi2MHzuULJpSkcUzsEtF+xGclrHsLV14PPER5QqB4JDlB5WJ5gy3hP0KUrOt2WSOOopADAfR+EwbilVjfvPQtWYnCD8mhmr4JKycdJHz/wJgO3EM1fw75xV2nOExvcDt5Ybfe7SkXzwhDSe/G4I4VETeLiZqztwyDduLBdsyHz9j2g=
+  app: daily-expenses-ui
+  on:
+    repo: sovas1/expenses
