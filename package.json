@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "DailyExpenses package.json from the documentation, supplemented with testing support",
   "scripts": {
+    "postinstall": "tsc",
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
     "build:e2e": "tsc -p e2e/",
