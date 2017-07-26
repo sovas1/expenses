@@ -5,14 +5,14 @@
     <form [formGroup]="expenseForm" novalidate>
       <div class="form-group">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div class="col-md-8 col-sm-12 mb-1">
             <div class="input-group">
               <expense-category-selector></expense-category-selector>
               <input type="text" class="form-control" aria-label="Text input with dropdown button"
                      placeholder="Expense description...">
             </div>
           </div>
-          <div class="col-md-3 col-sm-12">
+          <div class="col-md-3 col-sm-12 mb-1">
             <div class="input-group">
               <span class="input-group-addon">$</span>
               <input type="number" class="form-control" formControlName="expenseDescription"
