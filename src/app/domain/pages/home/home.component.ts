@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'home',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
+  expenseForm = new FormGroup({
+    expenseDescription: new FormControl()
+  });
 }

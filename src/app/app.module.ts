@@ -17,11 +17,13 @@ import { HistoryComponent } from './domain/pages/history/history.component';
 import { RegisterComponent } from './domain/auth/register/register.component';
 import { SignInComponent } from './domain/auth/sign-in/sign-in.component';
 import { CategoryService } from './domain/components/expense-category-selector/category.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
+    ReactiveFormsModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     NgbModule.forRoot(),
     AppRoutingModule
