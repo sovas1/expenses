@@ -37,10 +37,13 @@
     "@angular/platform-browser": "~4.0.0",
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.26",
 
     "typescript": "~2.2.1",
     "concurrently": "^3.2.0",
     "lite-server": "^2.2.2",
+
+    "bootstrap": "^4.0.0-alpha.6",
 
     "angular-in-memory-web-api": "~0.3.0",
     "systemjs": "0.19.40",

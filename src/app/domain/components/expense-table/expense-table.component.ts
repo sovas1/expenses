@@ -21,6 +21,6 @@ export class ExpenseTableComponent implements OnInit {
   }
 
   private getExpenses() {
-    this.expenseService.getExpenses().then(expenses => this.expenses = expenses);
+    this.expenseService.getExpenses().then(response => this.expenses = response);
   }
 }

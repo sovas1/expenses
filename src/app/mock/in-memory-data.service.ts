@@ -6,9 +6,14 @@ export class InMemoryDataService implements InMemoryDbService {
     const expenses = [
       {id: 1, desc: 'Driving to work', amount: 122, category: 'fuel'},
       {id: 2, desc: 'Driving from work', amount: 122, category: 'fuel'},
-      {id: 3, desc: 'Kaufland', amount: 67, category: 'grocery'}
+      {id: 3, desc: 'Kaufland', amount: 67, category: 'food'}
     ];
-    return {expenses};
+    const categories = [
+      'food',
+      'fuel',
+      'entertainment'
+    ];
+    return {expenses, categories};
   }
 
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
@@ -15,12 +16,14 @@ import { StatisticsComponent } from './domain/pages/statistics/statistics.compon
 import { HistoryComponent } from './domain/pages/history/history.component';
 import { RegisterComponent } from './domain/auth/register/register.component';
 import { SignInComponent } from './domain/auth/sign-in/sign-in.component';
+import { CategoryService } from './domain/components/expense-category-selector/category.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+    NgbModule.forRoot(),
     AppRoutingModule
   ],
   declarations: [
@@ -34,7 +37,7 @@ import { SignInComponent } from './domain/auth/sign-in/sign-in.component';
     ExpenseTableComponent,
     ExpenseCategorySelectorComponent
   ],
-  providers: [ExpenseService],
+  providers: [ExpenseService, CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
