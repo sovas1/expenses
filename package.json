@@ -2,7 +2,10 @@
   "name": "daily-expenses",
   "version": "1.0.0",
   "description": "DailyExpenses package.json from the documentation, supplemented with testing support",
-
+  "engines": {
+    "node": "6.9.5",
+    "npm": "3.10.10"
+  },
   "scripts": {
     "postinstall": "tsc",
     "build": "tsc -p src/",
