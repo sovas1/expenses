@@ -1,7 +1,7 @@
-import { Expense } from '../expense/expense';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ExpenseService } from '../expense/expense.service';
+import { ExpenseService } from '../../expense.service';
+import { Expense } from '../../expense.interface';
 
 @Component({
   selector: 'expenses-table',

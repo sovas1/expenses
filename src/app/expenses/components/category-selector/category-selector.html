@@ -1,0 +1,14 @@
+<div ngbDropdown class="d-block w-100">
+  <button class="btn btn-outline-success d-block w-100" id="dropdownBasic1" ngbDropdownToggle>
+    <span *ngIf="selected; else defaultCategoryButtonDesc">{{selected}}</span>
+  </button>
+  <div class="dropdown-menu w-100" aria-labelledby="dropdownBasic1">
+    <li *ngFor="let category of categories"
+        [class.selected]="selected"
+        (click)="onSelect(category)">
+      <button class="dropdown-item">{{category}}</button>
+    </li>
+  </div>
+</div>
+
+<ng-template #defaultCategoryButtonDesc>Category</ng-template>

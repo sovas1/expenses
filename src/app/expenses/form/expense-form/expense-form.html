@@ -1,0 +1,36 @@
+<form [formGroup]="form">
+
+  <div class="row">
+
+    <div class="col-md-2 col-sm-12 mb-1">
+      <category-selector
+        [parent]="form"
+        [categories]="categories"
+        [selected]="control.value"
+        (select)="selectCategory($event)">
+      </category-selector>
+    </div>
+
+    <div class="col-md-6 col-sm-12 mb-1">
+      <expense-name
+        [parent]="form">
+      </expense-name>
+    </div>
+
+    <div class="col-md-2 col-sm-8 mb-1">
+      <expense-amount
+        [parent]="form">
+      </expense-amount>
+    </div>
+
+    <div class="col-md-2 col-sm-4">
+      <add-expense-button
+        [parent]="form"
+        (add)="onSubmit()">
+        Add
+      </add-expense-button>
+    </div>
+
+  </div>
+
+</form>

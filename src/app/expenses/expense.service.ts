@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Expense } from './expense';
+
+import { Expense } from './expense.interface';
 
 import 'rxjs/add/operator/toPromise';
 
