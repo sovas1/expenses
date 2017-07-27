@@ -31,12 +31,10 @@ export class ExpenseFormComponent {
   }
 
   get control() {
-    console.log('control() form: ', this.form);
     return this.form.get('category') as FormControl;
   }
 
   selectCategory(category: Category) {
-    console.log('selectCategory: ', category);
     this.control.setValue(category);
   }
 

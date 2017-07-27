@@ -4,9 +4,9 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     const expenses = [
-      {id: 1, desc: 'Driving to work', amount: 122, category: 'fuel'},
-      {id: 2, desc: 'Driving from work', amount: 122, category: 'fuel'},
-      {id: 3, desc: 'Kaufland', amount: 67, category: 'food'}
+      {id: 1, name: 'Driving to work', amount: 122, category: 'fuel'},
+      {id: 2, name: 'Driving from work', amount: 122, category: 'fuel'},
+      {id: 3, name: 'Kaufland', amount: 67, category: 'food'}
     ];
     const categories = [
       'food',

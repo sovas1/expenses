@@ -15,10 +15,18 @@ export class ExpenseService {
   getExpenses(): Promise<Expense[]> {
     const url = `${this.expensesUrl}`;
     return this.http
-      .get(url)
-      .toPromise()
-      .then(response => response.json().data as Expense[])
-      .catch(this.handleError);
+               .get(url)
+               .toPromise()
+               .then(response => response.json().data as Expense[])
+               .catch(this.handleError);
+  }
+
+  create(expense: Expense): Promise<Expense> {
+    const url = `${this.expensesUrl}`;
+    return this.http.post(url, JSON.stringify(expense))
+                    .toPromise()
+                    .then(response => response.json().data as Expense)
+                    .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

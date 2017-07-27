@@ -9,14 +9,14 @@
         <tr>
           <th>#</th>
           <th>Description</th>
-          <th>Ammount</th>
+          <th>Amount</th>
           <th>Category</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of expenses; let i = index">
           <td>{{row.id}}</td>
-          <td>{{row.desc}}</td>
+          <td>{{row.name}}</td>
           <td>{{row.amount}}</td>
           <td>{{row.category}}</td>
         </tr>
