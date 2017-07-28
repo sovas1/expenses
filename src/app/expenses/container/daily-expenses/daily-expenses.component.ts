@@ -14,10 +14,9 @@ export class DailyExpensesComponent implements OnInit {
 
   expenses: Expense[];
 
-  constructor(
-    private expenseService: ExpenseService,
-    private categoryService: CategoryService
-  ) {}
+  constructor(private expenseService: ExpenseService,
+              private categoryService: CategoryService) {
+  }
 
   public ngOnInit(): void {
     this.getExpenses();
@@ -29,6 +28,9 @@ export class DailyExpensesComponent implements OnInit {
 
   addExpense(event: any) {
     console.log('addExpense: ', event);
-    this.expenseService.create(event).then(response => this.expenses.push(response));
+    this.expenseService.create(event).then(response => {
+      this.expenses.splice(0, 0, response);
+      console.log('after add: ', this.expenses);
+    });
   }
 }

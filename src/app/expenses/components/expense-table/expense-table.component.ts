@@ -1,6 +1,4 @@
-import { Router } from '@angular/router';
-import { Component, Input } from '@angular/core';
-import { ExpenseService } from '../../expense.service';
+import { Component, DoCheck, Input, IterableDiffer, IterableDiffers } from '@angular/core';
 import { Expense } from '../../expense.interface';
 
 @Component({
@@ -9,19 +7,32 @@ import { Expense } from '../../expense.interface';
   styleUrls: ['./expenses-table.component.scss']
 })
 
-export class ExpenseTableComponent {
-
-  page = 1;
-  itemsPerPage = 5;
-  previousPage =  1;
+export class ExpenseTableComponent implements DoCheck {
 
   @Input()
-  expenses: Expense[] = [];
+  expenses: Expense[];
 
   expensesPaged: Expense[] = [];
 
+  page = 1;
+  previousPage = 0;
+  itemsPerPage = 5;
+  totalItems = 0;
+
+  private diff: IterableDiffer<any>;
+
+  constructor(private differs: IterableDiffers) {
+    this.diff = differs.find([]).create(null);
+  }
+
+  public ngDoCheck(): void {
+    let changes = this.diff.diff(this.expenses);
+    if (changes) {
+      this.loadData();
+    }
+  }
+
   loadPage(page: number) {
-    console.log('load page[', page, ']');
     if (page !== this.previousPage) {
       this.previousPage = page;
       this.loadData();
@@ -29,14 +40,12 @@ export class ExpenseTableComponent {
   }
 
   private loadData() {
-    console.log('loading new page data - page[', this.page, '], size[', this.itemsPerPage, ']');
+    if (!this.expenses) {
+      return;
+    }
+    this.totalItems = this.expenses.length;
     let startIndex = (this.page - 1) * this.itemsPerPage;
     let endIndex = Math.min(startIndex + this.itemsPerPage - 1, this.totalItems - 1);
     this.expensesPaged = this.expenses.slice(startIndex, endIndex + 1);
-    // todo
-  }
-
-  get totalItems() {
-    return this.expenses ? this.expenses.length : 0;
   }
 }

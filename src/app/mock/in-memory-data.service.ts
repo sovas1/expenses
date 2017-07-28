@@ -6,11 +6,7 @@ export class InMemoryDataService implements InMemoryDbService {
     const expenses = [
       {name: 'Driving to work', amount: 122, category: 'fuel'},
       {name: 'Driving from work', amount: 122, category: 'fuel'},
-      {name: 'Kaufland', amount: 67, category: 'food'},
-      {category: 'fuel', name: 'Lorem ipsum', amount: 55},
-      {category: 'fuel', name: 'Lorem ipsum', amount: 55},
-      {category: 'fuel', name: 'Lorem ipsum', amount: 55},
-      {category: 'fuel', name: 'Lorem ipsum', amount: 55}
+      {name: 'Kaufland', amount: 67, category: 'food'}
     ];
     const categories = [
       'food',
