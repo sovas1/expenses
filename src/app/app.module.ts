@@ -22,6 +22,7 @@ import { ExpenseNameComponent } from './expenses/components/expense-name/expense
 import { AddExpenseButtonComponent } from './expenses/components/add-expense-button/add-expense-button.component';
 import { ExpenseFormComponent } from './expenses/form/expense-form/expense-form.component';
 import { ExpenseAmountComponent } from './expenses/components/expense-amount/expense-amount.component';
+import { RemoveExpenseButtonComponent } from './expenses/components/remove-expense-button/remove-expense-button.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { ExpenseAmountComponent } from './expenses/components/expense-amount/exp
     CategorySelectorComponent,
     ExpenseNameComponent,
     AddExpenseButtonComponent,
+    RemoveExpenseButtonComponent,
     NavbarComponent,
     HistoryComponent,
     StatisticsComponent,

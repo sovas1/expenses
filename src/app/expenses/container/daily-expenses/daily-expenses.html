@@ -8,7 +8,8 @@
   </div>
   <div class="mt-4">
     <expenses-table
-      [expenses]="expenses">
+      [expenses]="expenses"
+      (remove)="removeExpense($event)">
     </expenses-table>
   </div>
 

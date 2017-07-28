@@ -12,6 +12,7 @@
             <th>Description</th>
             <th>Amount</th>
             <th>Category</th>
+            <th>Actions</th>
           </tr>
           </thead>
           <tbody>
@@ -20,6 +21,11 @@
             <td>{{row.name}}</td>
             <td>{{row.amount}}</td>
             <td>{{row.category}}</td>
+            <td>
+              <remove-expense-button
+                (remove)="removeRow(row)">
+              </remove-expense-button>
+            </td>
           </tr>
           </tbody>
         </table>

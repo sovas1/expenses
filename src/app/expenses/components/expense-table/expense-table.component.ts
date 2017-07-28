@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input, IterableDiffer, IterableDiffers } from '@angular/core';
+import { Component, DoCheck, EventEmitter, Input, IterableDiffer, IterableDiffers, Output } from '@angular/core';
 import { Expense } from '../../expense.interface';
 
 @Component({
@@ -8,6 +8,9 @@ import { Expense } from '../../expense.interface';
 })
 
 export class ExpenseTableComponent implements DoCheck {
+
+  @Output()
+  remove = new EventEmitter<any>();
 
   @Input()
   expenses: Expense[];
@@ -47,5 +50,9 @@ export class ExpenseTableComponent implements DoCheck {
     let startIndex = (this.page - 1) * this.itemsPerPage;
     let endIndex = Math.min(startIndex + this.itemsPerPage - 1, this.totalItems - 1);
     this.expensesPaged = this.expenses.slice(startIndex, endIndex + 1);
+  }
+
+  removeRow(row: Expense) {
+    this.remove.emit(row);
   }
 }

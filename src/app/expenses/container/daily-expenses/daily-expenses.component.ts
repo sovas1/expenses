@@ -33,4 +33,13 @@ export class DailyExpensesComponent implements OnInit {
       console.log('after add: ', this.expenses);
     });
   }
+
+  removeExpense(event: any) {
+    console.log('removeExpense: ', event);
+    let index: number = this.expenses.indexOf(event);
+    this.expenseService.remove(event.id).then(response => {
+      this.expenses.splice(index, 1);
+      console.log('after remove: ', this.expenses);
+    });
+  }
 }

@@ -29,6 +29,14 @@ export class ExpenseService {
                     .catch(this.handleError);
   }
 
+  remove(id: number): Promise<any> {
+    const url = `${this.expensesUrl}/${id}`;
+    return this.http.delete(url)
+                    .toPromise()
+                    .then(response => console.log('removed'))
+                    .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
