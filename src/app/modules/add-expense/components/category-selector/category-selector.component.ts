@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CategoryService } from '../../category.service';
+import { CategoryService } from '../../../../expenses/category.service';
 import { FormGroup } from '@angular/forms';
-import { Category } from '../../expense.interface';
+import { Category } from '../../../../expenses/expense.interface';
 
 @Component({
   selector: 'category-selector',

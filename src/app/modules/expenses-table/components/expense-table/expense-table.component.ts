@@ -1,5 +1,5 @@
 import { Component, DoCheck, EventEmitter, Input, IterableDiffer, IterableDiffers, Output } from '@angular/core';
-import { Expense } from '../../expense.interface';
+import { Expense } from '../../../../expenses/expense.interface';
 
 @Component({
   selector: 'expenses-table',

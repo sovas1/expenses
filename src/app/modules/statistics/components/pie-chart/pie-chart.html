@@ -1,0 +1,15 @@
+<div *ngIf="pieChartData.length > 0">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-10 col-xs-10">
+      <div class="">
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>

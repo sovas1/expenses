@@ -9,18 +9,18 @@ import { InMemoryDataService } from './mock/in-memory-data.service';
 import { AppRoutingModule } from './app-routing-module';
 import { ExpenseService } from './expenses/expense.service';
 import { NavbarComponent } from './expenses/components/navbar/navbar.component';
-import { StatisticsComponent } from './expenses/pages/statistics/statistics.component';
 import { HistoryComponent } from './expenses/pages/history/history.component';
 import { RegisterComponent } from './expenses/auth/register/register.component';
 import { SignInComponent } from './expenses/auth/sign-in/sign-in.component';
 import { CategoryService } from './expenses/category.service';
 import { DailyExpensesComponent } from './expenses/container/daily-expenses/daily-expenses.component';
-import { ExpensesTableModule } from './modules/expenses-table.module';
-import { AddExpenseModule } from './modules/add-expense.module';
+import { ExpensesTableModule } from './modules/expenses-table/expenses-table.module';
+import { AddExpenseModule } from './modules/add-expense/add-expense.module';
+import { StatisticsModule } from './modules/statistics/statistics.module';
 
 @NgModule({
   imports: [
-    ExpensesTableModule, AddExpenseModule,
+    ExpensesTableModule, AddExpenseModule, StatisticsModule,
     BrowserModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
@@ -32,7 +32,6 @@ import { AddExpenseModule } from './modules/add-expense.module';
     DailyExpensesComponent,
     NavbarComponent,
     HistoryComponent,
-    StatisticsComponent,
     SignInComponent,
     RegisterComponent,
   ],
