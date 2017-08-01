@@ -7,6 +7,7 @@ import { CategorySelectorComponent } from './components/category-selector/catego
 import { ExpenseNameComponent } from './components/expense-name/expense-name.component';
 import { AddExpenseButtonComponent } from './components/add-expense-button/add-expense-button.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExpenseDateComponent } from './components/expense-date/expense-date.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExpenseAmountComponent,
     CategorySelectorComponent,
     ExpenseNameComponent,
-    AddExpenseButtonComponent
+    AddExpenseButtonComponent,
+    ExpenseDateComponent
   ],
   exports: [ ExpenseFormComponent ],
   providers: []

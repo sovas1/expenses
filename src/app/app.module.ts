@@ -17,6 +17,8 @@ import { DailyExpensesComponent } from './expenses/container/daily-expenses/dail
 import { ExpensesTableModule } from './modules/expenses-table/expenses-table.module';
 import { AddExpenseModule } from './modules/add-expense/add-expense.module';
 import { StatisticsModule } from './modules/statistics/statistics.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DateFilterPipe } from './expenses/pipes/date-filter/date-filter.pipe';
 
 @NgModule({
   imports: [
@@ -25,7 +27,8 @@ import { StatisticsModule } from './modules/statistics/statistics.module';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,

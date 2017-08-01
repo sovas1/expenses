@@ -24,6 +24,7 @@ export class ExpenseFormComponent {
 
   private createForm() {
     this.form = this.formBuilder.group({
+      date: ['', Validators.required],
       category: ['', Validators.required],
       name: ['', Validators.required],
       amount: [0, Validators.required]

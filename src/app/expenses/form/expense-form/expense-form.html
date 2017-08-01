@@ -1,5 +1,15 @@
 <form [formGroup]="form">
 
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <expense-date
+        [parent]="form">
+      </expense-date>
+    </div>
+  </div>
+
+  <hr>
+
   <div class="row">
 
     <div class="col-md-2 col-sm-12 mb-1">

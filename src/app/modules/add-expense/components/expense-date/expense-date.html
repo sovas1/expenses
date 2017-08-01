@@ -1,0 +1,14 @@
+<div [formGroup]="parent">
+  <div class="input-group">
+    <button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
+    <input placeholder="yyyy-mm-dd"
+           name="dp"
+           formControlName="date"
+           ngbDatepicker
+           #dp [(ngModel)]="date"
+           #d="ngbDatepicker">
+    <div class="input-group-addon" (click)="d.toggle()">
+      <i class="fa fa-calendar-o" style="width: 1.2rem; height: 1rem; cursor: pointer;" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
