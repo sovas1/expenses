@@ -32,7 +32,7 @@ export class CategorySelectorComponent {
   }
 
   exists(category: Category) {
-    return !!~this.selected.indexOf(category);
+    return !!this.selected.indexOf(category);
   }
 
   isActive(category: Category) {

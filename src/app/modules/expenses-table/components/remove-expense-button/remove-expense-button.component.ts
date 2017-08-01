@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { ExpenseService } from '../../../../expenses/expense.service';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'remove-expense-button',

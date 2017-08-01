@@ -8,7 +8,6 @@
           </caption>
           <thead>
           <tr>
-            <th>Date</th>
             <th>Description</th>
             <th>Amount</th>
             <th>Category</th>
@@ -17,7 +16,6 @@
           </thead>
           <tbody>
           <tr *ngFor="let row of expensesPaged">
-            <td>{{row.date | json}}</td>
             <td>{{row.name}}</td>
             <td>{{row.amount}}</td>
             <td>{{row.category}}</td>

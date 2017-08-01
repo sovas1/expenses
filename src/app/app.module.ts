@@ -18,7 +18,6 @@ import { ExpensesTableModule } from './modules/expenses-table/expenses-table.mod
 import { AddExpenseModule } from './modules/add-expense/add-expense.module';
 import { StatisticsModule } from './modules/statistics/statistics.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DateFilterPipe } from './expenses/pipes/date-filter/date-filter.pipe';
 
 @NgModule({
   imports: [
